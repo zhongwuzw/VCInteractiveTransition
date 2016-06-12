@@ -8,6 +8,10 @@
 
 #import "DetailViewController.h"
 
+@interface DetailViewController ()
+
+@end
+
 @implementation DetailViewController
 
 - (void)viewDidLoad
@@ -16,7 +20,9 @@
     
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
     
-    [self.navigationItem setTitle:@"详细页"];
+    [self.navigationController setNavigationBarHidden:YES];
     
 }
+
+
 @end

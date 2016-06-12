@@ -16,7 +16,8 @@
 		0E5A89121D0C562A0052F0C2 /* VCInteractiveTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A89111D0C562A0052F0C2 /* VCInteractiveTransitionTests.m */; };
 		0E5A891D1D0C562A0052F0C2 /* VCInteractiveTransitionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A891C1D0C562A0052F0C2 /* VCInteractiveTransitionUITests.m */; };
 		0E5A892C1D0C5AD60052F0C2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A892B1D0C5AD60052F0C2 /* DetailViewController.m */; };
-		0E5A892F1D0C5B850052F0C2 /* VCTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A892E1D0C5B850052F0C2 /* VCTransitionManager.m */; };
+		0ECA6EF91D0D14F200BFFFEE /* PushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA6EF81D0D14F200BFFFEE /* PushAnimator.m */; };
+		0ECA6EFC1D0D14FC00BFFFEE /* PopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA6EFB1D0D14FC00BFFFEE /* PopAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +56,10 @@
 		0E5A891E1D0C562A0052F0C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E5A892A1D0C5AD60052F0C2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		0E5A892B1D0C5AD60052F0C2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		0E5A892D1D0C5B850052F0C2 /* VCTransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTransitionManager.h; sourceTree = "<group>"; };
-		0E5A892E1D0C5B850052F0C2 /* VCTransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTransitionManager.m; sourceTree = "<group>"; };
+		0ECA6EF71D0D14F200BFFFEE /* PushAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimator.h; sourceTree = "<group>"; };
+		0ECA6EF81D0D14F200BFFFEE /* PushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimator.m; sourceTree = "<group>"; };
+		0ECA6EFA1D0D14FC00BFFFEE /* PopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimator.h; sourceTree = "<group>"; };
+		0ECA6EFB1D0D14FC00BFFFEE /* PopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +116,10 @@
 				0E5A88FE1D0C562A0052F0C2 /* ViewController.m */,
 				0E5A892A1D0C5AD60052F0C2 /* DetailViewController.h */,
 				0E5A892B1D0C5AD60052F0C2 /* DetailViewController.m */,
-				0E5A892D1D0C5B850052F0C2 /* VCTransitionManager.h */,
-				0E5A892E1D0C5B850052F0C2 /* VCTransitionManager.m */,
+				0ECA6EF71D0D14F200BFFFEE /* PushAnimator.h */,
+				0ECA6EF81D0D14F200BFFFEE /* PushAnimator.m */,
+				0ECA6EFA1D0D14FC00BFFFEE /* PopAnimator.h */,
+				0ECA6EFB1D0D14FC00BFFFEE /* PopAnimator.m */,
 				0E5A89001D0C562A0052F0C2 /* Main.storyboard */,
 				0E5A89031D0C562A0052F0C2 /* Assets.xcassets */,
 				0E5A89051D0C562A0052F0C2 /* LaunchScreen.storyboard */,
@@ -282,8 +287,9 @@
 			files = (
 				0E5A88FF1D0C562A0052F0C2 /* ViewController.m in Sources */,
 				0E5A88FC1D0C562A0052F0C2 /* AppDelegate.m in Sources */,
+				0ECA6EFC1D0D14FC00BFFFEE /* PopAnimator.m in Sources */,
 				0E5A88F91D0C562A0052F0C2 /* main.m in Sources */,
-				0E5A892F1D0C5B850052F0C2 /* VCTransitionManager.m in Sources */,
+				0ECA6EF91D0D14F200BFFFEE /* PushAnimator.m in Sources */,
 				0E5A892C1D0C5AD60052F0C2 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +514,7 @@
 				0E5A89231D0C562A0052F0C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E5A89241D0C562A0052F0C2 /* Build configuration list for PBXNativeTarget "VCInteractiveTransitionTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +523,7 @@
 				0E5A89261D0C562A0052F0C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E5A89271D0C562A0052F0C2 /* Build configuration list for PBXNativeTarget "VCInteractiveTransitionUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +532,7 @@
 				0E5A89291D0C562A0052F0C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
