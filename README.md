@@ -2,8 +2,7 @@
 仿腾讯新闻、鲜城等Controller转场时的动画。
 
 
-![](https://raw.githubusercontent.com/gontovnik/DGElasticPullToRefresh/master/DGElasticPullToRefreshPreview1.gif)
-![](https://raw.githubusercontent.com/gontovnik/DGElasticPullToRefresh/master/DGElasticPullToRefreshPreview2.gif)
+![](https://raw.githubusercontent.com/zhongwuzw/VCInteractiveTransition/master/VCTransitionAnimation.gif)
 
 ## Requirements
 * iOS 7.0 or higher
