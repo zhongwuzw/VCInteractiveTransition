@@ -43,6 +43,9 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark -
+#pragma mark - UINavigationControllerDelegate
+
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
                                                fromViewController:(UIViewController*)fromVC
@@ -61,6 +64,9 @@
                          interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
     return self.interactionController;
 }
+
+#pragma mark -
+#pragma mark - handleSwipe
 
 - (void)handleSwipeFromLeftEdge:(UIScreenEdgePanGestureRecognizer *)gesture {
     CGPoint translate = [gesture translationInView:gesture.view];

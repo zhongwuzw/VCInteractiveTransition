@@ -18,6 +18,7 @@
 		0E5A892C1D0C5AD60052F0C2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5A892B1D0C5AD60052F0C2 /* DetailViewController.m */; };
 		0ECA6EF91D0D14F200BFFFEE /* PushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA6EF81D0D14F200BFFFEE /* PushAnimator.m */; };
 		0ECA6EFC1D0D14FC00BFFFEE /* PopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA6EFB1D0D14FC00BFFFEE /* PopAnimator.m */; };
+		0ECA6F001D0D5B6B00BFFFEE /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA6EFF1D0D5B6B00BFFFEE /* UIColor+Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		0ECA6EF81D0D14F200BFFFEE /* PushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimator.m; sourceTree = "<group>"; };
 		0ECA6EFA1D0D14FC00BFFFEE /* PopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimator.h; sourceTree = "<group>"; };
 		0ECA6EFB1D0D14FC00BFFFEE /* PopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimator.m; sourceTree = "<group>"; };
+		0ECA6EFE1D0D5B6B00BFFFEE /* UIColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
+		0ECA6EFF1D0D5B6B00BFFFEE /* UIColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,16 +113,11 @@
 		0E5A88F61D0C562A0052F0C2 /* VCInteractiveTransition */ = {
 			isa = PBXGroup;
 			children = (
+				0ECA6F031D0D61EA00BFFFEE /* Animator */,
+				0ECA6F021D0D61DF00BFFFEE /* Controller */,
+				0ECA6F011D0D61CB00BFFFEE /* Util */,
 				0E5A88FA1D0C562A0052F0C2 /* AppDelegate.h */,
 				0E5A88FB1D0C562A0052F0C2 /* AppDelegate.m */,
-				0E5A88FD1D0C562A0052F0C2 /* ViewController.h */,
-				0E5A88FE1D0C562A0052F0C2 /* ViewController.m */,
-				0E5A892A1D0C5AD60052F0C2 /* DetailViewController.h */,
-				0E5A892B1D0C5AD60052F0C2 /* DetailViewController.m */,
-				0ECA6EF71D0D14F200BFFFEE /* PushAnimator.h */,
-				0ECA6EF81D0D14F200BFFFEE /* PushAnimator.m */,
-				0ECA6EFA1D0D14FC00BFFFEE /* PopAnimator.h */,
-				0ECA6EFB1D0D14FC00BFFFEE /* PopAnimator.m */,
 				0E5A89001D0C562A0052F0C2 /* Main.storyboard */,
 				0E5A89031D0C562A0052F0C2 /* Assets.xcassets */,
 				0E5A89051D0C562A0052F0C2 /* LaunchScreen.storyboard */,
@@ -153,6 +151,37 @@
 				0E5A891E1D0C562A0052F0C2 /* Info.plist */,
 			);
 			path = VCInteractiveTransitionUITests;
+			sourceTree = "<group>";
+		};
+		0ECA6F011D0D61CB00BFFFEE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0ECA6EFE1D0D5B6B00BFFFEE /* UIColor+Util.h */,
+				0ECA6EFF1D0D5B6B00BFFFEE /* UIColor+Util.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		0ECA6F021D0D61DF00BFFFEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E5A88FD1D0C562A0052F0C2 /* ViewController.h */,
+				0E5A88FE1D0C562A0052F0C2 /* ViewController.m */,
+				0E5A892A1D0C5AD60052F0C2 /* DetailViewController.h */,
+				0E5A892B1D0C5AD60052F0C2 /* DetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0ECA6F031D0D61EA00BFFFEE /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				0ECA6EF71D0D14F200BFFFEE /* PushAnimator.h */,
+				0ECA6EF81D0D14F200BFFFEE /* PushAnimator.m */,
+				0ECA6EFA1D0D14FC00BFFFEE /* PopAnimator.h */,
+				0ECA6EFB1D0D14FC00BFFFEE /* PopAnimator.m */,
+			);
+			name = Animator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +317,7 @@
 				0E5A88FF1D0C562A0052F0C2 /* ViewController.m in Sources */,
 				0E5A88FC1D0C562A0052F0C2 /* AppDelegate.m in Sources */,
 				0ECA6EFC1D0D14FC00BFFFEE /* PopAnimator.m in Sources */,
+				0ECA6F001D0D5B6B00BFFFEE /* UIColor+Util.m in Sources */,
 				0E5A88F91D0C562A0052F0C2 /* main.m in Sources */,
 				0ECA6EF91D0D14F200BFFFEE /* PushAnimator.m in Sources */,
 				0E5A892C1D0C5AD60052F0C2 /* DetailViewController.m in Sources */,

@@ -7,8 +7,12 @@
 //
 
 #import "PopAnimator.h"
+#import "UIColor+Util.h"
 
 @implementation PopAnimator
+
+#pragma mark -
+#pragma mark - UIViewControllerAnimatedTransitioning
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
@@ -26,6 +30,7 @@
     toViewController.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        toViewController.view.backgroundColor = [UIColor colorWithHex:0xffffff alpha:1];
         toViewController.view.transform = CGAffineTransformMakeScale(1/0.9, 1/0.9);
         fromViewController.view.frame = f;
     } completion:^(BOOL finished) {

@@ -7,8 +7,12 @@
 //
 
 #import "PushAnimator.h"
+#import "UIColor+Util.h"
 
 @implementation PushAnimator
+
+#pragma mark -
+#pragma mark - UIViewControllerAnimatedTransitioning
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
@@ -30,6 +34,7 @@
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         fromViewController.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
         toViewController.view.frame = originRect;
+        fromViewController.view.backgroundColor = [UIColor colorWithHex:0x4D4848 alpha:0.8];
     } completion:^(BOOL finished) {
         fromViewController.view.transform = CGAffineTransformMakeScale(1, 1);
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
