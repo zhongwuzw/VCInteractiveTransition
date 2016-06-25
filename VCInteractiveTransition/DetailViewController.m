@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "UIColor+Util.h"
 
 @interface DetailViewController ()
 
@@ -18,11 +19,12 @@
 {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor lightGrayColor]];
-    
-    [self.navigationController setNavigationBarHidden:YES];
+    [self.view setBackgroundColor:[UIColor colorWithHex:0x81F781]];
     
 }
 
+- (IBAction)handleButtonClicked:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

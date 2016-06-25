@@ -26,8 +26,7 @@
     
     [self.navigationController setNavigationBarHidden:YES];
     
-    UIScreenEdgePanGestureRecognizer *edge = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFromLeftEdge:)];
-    edge.edges = UIRectEdgeLeft;
+    UIPanGestureRecognizer *edge = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFromLeftEdge:)];
     [self.navigationController.view addGestureRecognizer:edge];
 
     // Do any additional setup after loading the view, typically from a nib.
@@ -39,7 +38,9 @@
 }
 
 - (IBAction)handleButtonClicked:(UIButton *)sender {
-    DetailViewController *vc = [DetailViewController new];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    DetailViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+//    DetailViewController *vc = [DetailViewController new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -69,8 +70,8 @@
 #pragma mark - handleSwipe
 
 - (void)handleSwipeFromLeftEdge:(UIScreenEdgePanGestureRecognizer *)gesture {
-    CGPoint translate = [gesture translationInView:gesture.view];
-    CGFloat percent   = translate.x / gesture.view.bounds.size.width;
+    CGPoint translate = [gesture translationInView:[UIApplication sharedApplication].delegate.window];
+    CGFloat percent   = translate.x / self.view.bounds.size.width;
     
     if (gesture.state == UIGestureRecognizerStateBegan) {
         self.interactionController = [[UIPercentDrivenInteractiveTransition alloc] init];
@@ -79,7 +80,7 @@
         [self.interactionController updateInteractiveTransition:percent];
     } else if (gesture.state == UIGestureRecognizerStateEnded) {
         CGPoint velocity = [gesture velocityInView:gesture.view];
-        if (percent > 0.5 || velocity.x > 0) {
+        if (velocity.x > 0) {
             [self.interactionController finishInteractiveTransition];
         } else {
             [self.interactionController cancelInteractiveTransition];

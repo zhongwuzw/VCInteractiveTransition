@@ -9,6 +9,12 @@
 #import "PushAnimator.h"
 #import "UIColor+Util.h"
 
+@interface PushAnimator ()
+
+@property(nonatomic, strong)id<UIViewControllerContextTransitioning>transitionContext;
+
+@end
+
 @implementation PushAnimator
 
 #pragma mark -
@@ -16,11 +22,13 @@
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.5;
+    return .5;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
+    self.transitionContext = transitionContext;
+    
     UIViewController *toViewController   = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
@@ -36,7 +44,6 @@
         toViewController.view.frame = originRect;
         fromViewController.view.backgroundColor = [UIColor colorWithHex:0x4D4848 alpha:0.8];
     } completion:^(BOOL finished) {
-        fromViewController.view.transform = CGAffineTransformMakeScale(1, 1);
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
 }

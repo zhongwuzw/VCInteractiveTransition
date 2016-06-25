@@ -53,5 +53,36 @@
             </objects>
             <point key="canvasLocation" x="280" y="318"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="uNV-qs-2aK">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="7ei-n2-O8d" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q9m-gL-26c"/>
+                        <viewControllerLayoutGuide type="bottom" id="zuS-sA-l5j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lsu-fz-qGv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjI-GD-jRb">
+                                <rect key="frame" x="225" y="285" width="150" height="30"/>
+                                <state key="normal" title="向右滑动或点击该按钮"/>
+                                <connections>
+                                    <action selector="handleButtonClicked:" destination="7ei-n2-O8d" eventType="touchUpInside" id="qVa-MO-W6A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UjI-GD-jRb" firstAttribute="centerY" secondItem="lsu-fz-qGv" secondAttribute="centerY" id="DOA-6K-JhU"/>
+                            <constraint firstItem="UjI-GD-jRb" firstAttribute="centerX" secondItem="lsu-fz-qGv" secondAttribute="centerX" id="OnP-fe-EJp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CW-6W-ynk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="364"/>
+        </scene>
     </scenes>
 </document>
