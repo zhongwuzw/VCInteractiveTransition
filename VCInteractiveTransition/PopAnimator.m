@@ -30,8 +30,8 @@
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         toViewController.view.backgroundColor = [UIColor colorWithHex:0xffffff alpha:1];
-//        toViewController.view.transform = CGAffineTransformIdentity;
-        toViewController.view.transform = CGAffineTransformScale(toViewController.view.transform, 1/0.9, 1/0.9);
+        toViewController.view.transform = CGAffineTransformIdentity;
+//        toViewController.view.transform = CGAffineTransformScale(toViewController.view.transform, 1/0.9, 1/0.9);
         fromViewController.view.frame = f;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
